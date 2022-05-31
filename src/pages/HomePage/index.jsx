@@ -1,17 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 
+import NavBar from "../../components/NavBar";
 import VirtualizedList from "../../components/VirtualizedList";
-
-
+import { ticketLength } from "../../mockedDatabase";
 
 import "./styles.scss";
 
 const HomePage = () => {
-
-
   return (
     <>
-   <VirtualizedList numItems={1000} itemHeight={200} windowHeight={1000}/>
+      <NavBar link="/tickets/new" linkText="Create new ticket" />
+      <VirtualizedList numItems={ticketLength} itemHeight={300} windowHeight={1000} />
     </>
   );
 };
